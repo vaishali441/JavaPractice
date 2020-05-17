@@ -18,5 +18,6 @@ public class Encapsulation {
 	
 //	in your project where you have implemented
 //	FCBean and FCBeanMapper  in VDS see to understand 
+//beanClass is Encapsulation class
 
 }
