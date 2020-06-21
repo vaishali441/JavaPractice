@@ -1,0 +1,34 @@
+class Solution {
+    public int lengthOfLongestSubstring(String s) {
+    
+        
+        String input = "bbbbb";
+        char inarr[] = input.toCharArray();
+        int substringlen = 0;
+        String substring = null;
+        LinkedHashMap<Character,Integer> map = new LinkedHashMap<>();
+        
+        for(int i = 0; i < inarr.length; i++)
+        {
+            char ch = inarr[i];
+            if(!map.containsKey(ch))
+            {
+                map.put(ch,i);
+            }
+            else
+            {
+                i = map.get(ch);
+                map.clear();
+            }
+            if(map.size() > substringlen)
+            {
+                substringlen = map.size();
+                substring = map.keySet().toString();
+            }
+        }
+        
+        
+       return  substringlen;
+    }
+}
+        
